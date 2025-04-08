@@ -1,54 +1,29 @@
-# React + TypeScript + Vite
+# 🧾 Documentação dos Componentes - Teste Montink
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+O foco deste projeto foi a funcionalidade, sem ênfase em estilização. O HTML foi convertido para JSX, sendo posteriormente organizado em componentes reutilizáveis. A estrutura foi pensada para que os dados possam ser facilmente adaptados.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+##APP.tsx
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Componente principal da aplicação.
+useEffect - Ao montar o componente, carrega os dados previamente salvos do localStorage.
+salvarDados() - Persiste os dados principais no localStorage com a chave "meusDados".
+Gerencia os estados e renderiza os componentes.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+##Produto e Curso
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Componente de listagem de produtos/curso , ela é baseada em um objeto que armazena as categorias como chaves e arrays como valores. Esse objeto inicial serve como base para os estados dinâmicos manipulados pelo componente. A lógica de edição é controlada localmente, utilizando estados com useState e useEffect. Assim armazenar os produtos em estado local, renderizar uma lista de ProdutoCard / CursoCard e fornece a função onUpdate para que cada card possa atualizar seus dados.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+##CARDS (produtoCard e cursoCard)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Este componente representa um card individual, com a possibilidade de edição inline de título, descrição e valor. Ele recebe as informações do componente pai  por meio de props. Cada vez que o usuário dá um duplo clique no card, ele entra no modo de edição.
+A comunicação entre eles segue o padrão pai-filho, onde o card apenas dispara a atualização, e o componente pai aplica a modificação no estado global.
+
+##NAVBAR
+
+Componente responsável pela navegação lateral do sistema, oferecendo opções de produtos e cursos. Renderiza os itens de menu com base em menuOrder, permitindo arrastar e soltar para reorganizar. Cada item abre um dropdown com categorias específicas (produtos ou cursos) e Oferece botões extras para abrir um modal genérico e para salvar o layout atual.
+
+##MODAL
+
+Modal de configurações que permite editar os títulos associados aos elementos do layout selecionado (produto e curso). Ao clicar em Salvar Alterações, os valores digitados são enviados para o componente pai salvando no localStorage.
