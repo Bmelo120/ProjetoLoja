@@ -43,7 +43,7 @@ const NavBar: React.FC<NavBarProps> = ({ onSelectProduct, onSelectCurse, menuOrd
               aria-expanded="true"
               type="button"
               data-bs-toggle="dropdown"
-              className="dropdown-toggle link-light"
+              className="dropdown-toggle link-light icon-draggable"
               href="#"
             >
               <i className="fas fa-grip-horizontal icon-draggable"></i>
@@ -64,7 +64,7 @@ const NavBar: React.FC<NavBarProps> = ({ onSelectProduct, onSelectCurse, menuOrd
               aria-expanded="true"
               type="button"
               data-bs-toggle="dropdown"
-              className="dropdown-toggle link-light"
+              className="dropdown-toggle link-light icon-draggable"
               href="#"
             >
               <i className="fas fa-grip-horizontal icon-draggable"></i>

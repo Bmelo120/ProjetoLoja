@@ -8,10 +8,10 @@ interface CursosProps {
 
 const cursosByCategory: Record<string, any[]> = {
     tecnologia: [
-      { id: 'tec 1', titulo: 'Programção PHP', valor: '$30,00', iconeClasse: 'fas fa-calendar' },
-      { id: 'tec 2', titulo: 'Programção C#', valor: '$34,90', iconeClasse: 'fas fa-calendar' },
-      { id: 'tec 3',titulo: 'Programção Python', valor: '$29,90', iconeClasse: 'fas fa-calendar' },
-      { id: 'tec 4', titulo: 'POO',valor: '$19,90', iconeClasse: 'fas fa-calendar' },
+      { id: 'tec 1', titulo: 'Programação PHP', valor: '$30,00', iconeClasse: 'fas fa-calendar' },
+      { id: 'tec 2', titulo: 'Programação C#', valor: '$34,90', iconeClasse: 'fas fa-calendar' },
+      { id: 'tec 3',titulo: 'Programação JS', valor: '$29,90', iconeClasse: 'fas fa-calendar' },
+      { id: 'tec 4', titulo: 'Programação OO',valor: '$19,90', iconeClasse: 'fas fa-calendar' },
     ],
     culinaria: [
       { id: 'cul 1', titulo: 'Culinária Saudável',valor: '$40,00', iconeClasse: 'fas fa-calendar' },

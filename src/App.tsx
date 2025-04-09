@@ -49,7 +49,6 @@ const App: React.FC = () => {
       <div className="d-flex flex-column" id="content-wrapper">
         <div id="content">
           <div className="container-fluid">
-          <div className="container-fluid">
             <h3 className="text-dark mb-4">Elementos</h3>
             <Modal
                 onTituloProduct={(titulo) => setTituloProduto(titulo)}
@@ -57,8 +56,11 @@ const App: React.FC = () => {
               />
             <Produtos category={selectProduct} mainTitle={tituloProduto}/>
             <Cursos category={selectCurse}  mainTitle={tituloCurso}/>
-             </div>
           </div>
+           <div className="my-3 text-center ">
+            <a className="btn btn-primary btn-lg me-2 align-middle" role="button" href="#">
+              UP </a>
+            </div>
         </div>
         <footer className="bg-white sticky-footer">
           <div className="container my-auto">

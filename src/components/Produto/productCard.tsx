@@ -1,3 +1,4 @@
+import { Pencil } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
 interface ProductCardProps {
@@ -32,8 +33,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ titulo, descricao, imagem, id
           src={imagem}
           alt={titulo}
         />
-        <div className="card-body p-4">
-          <p className="text-primary card-text mb-0">Produto</p>
+        <a href="#" className="card-body p-4 pe-visiblePainted">
+          <p className="text-primary card-text mb-0">Produto
+          </p>
           {isEditing ? (
             <>
               <input
@@ -51,16 +53,22 @@ const ProductCard: React.FC<ProductCardProps> = ({ titulo, descricao, imagem, id
             </>
           ) : (
           <>
-            <h4 className="card-title">{titulo}</h4>
+          <div className="d-flex justify-content-between align-items-center">
+          <h4 className="card-title">{titulo}</h4>          
+            <Pencil
+            size={18}
+            className="text-muted hover-icon "
+            />
+          </div>
             <p className="card-text">{descricao}</p>
             <button className="btn btn-primary" type="button" style={{ width: "100%" }}>
               Comprar
             </button>
           </>
       )}
-      </div>
+      </a>
     </div>
-    </div >
+    </div>
   );
 };
 

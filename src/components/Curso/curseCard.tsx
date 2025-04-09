@@ -1,3 +1,4 @@
+import { Pencil } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
 interface curseCardProps {
@@ -46,8 +47,12 @@ const curseCard: React.FC<curseCardProps> = ({ titulo, valor, iconeClasse, id, o
                 </>
               ) : (
                 <>
-                  <div className="text-uppercase text-primary fw-bold text-xs mb-1">
+                  <div className="text-uppercase text-primary fw-bold text-xs mb-1 d-flex align-items-center justify-content-between ">
                     <span>{titulo}</span>
+                    <Pencil
+                      size={18}
+                      className="text-muted hover-icon "
+                    />
                   </div>
                   <div className="text-dark fw-bold h5 mb-0">
                     <span>{valor}</span>

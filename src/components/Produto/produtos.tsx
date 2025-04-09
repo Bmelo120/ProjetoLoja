@@ -6,7 +6,7 @@ interface ProdutosProps {
   mainTitle: string;
 }
 
-const dataByCategory: Record<string, any[]> = {
+const productByCategory: Record<string, any[]> = {
   bone: [
     { id: 'bone1', titulo: 'Boné Preto', descricao: 'Boné estiloso preto.', imagem: "/img/bone1.webp" },
     { id: 'bone2', titulo: 'Boné Branco', descricao: 'Boné branco clássico.', imagem: "/img/bone2.webp" },
@@ -31,12 +31,12 @@ const dataByCategory: Record<string, any[]> = {
 
 const Produtos: React.FC<ProdutosProps> = ({ category, mainTitle}) => {
   //controlar estado dos cards
-  const [jsonData, setJsonData] = useState<Record<string, any[]>>(dataByCategory);
+  const [jsonData, setJsonData] = useState<Record<string, any[]>>(productByCategory);
 
   const [produtos, setProdutos] = useState<any[]>([]);
 
   useEffect(() => {
-    setProdutos(dataByCategory[category])
+    setProdutos(productByCategory[category])
   }, [category]);
 
     // mapeia os produtos e retorna uma nova versão criada
@@ -50,7 +50,6 @@ const Produtos: React.FC<ProdutosProps> = ({ category, mainTitle}) => {
       };
   
       setJsonData(novoJson); 
-      console.log("JSON Atualizado:", novoJson);  
       setProdutos(atualizados); 
     };
 
@@ -61,8 +60,7 @@ const Produtos: React.FC<ProdutosProps> = ({ category, mainTitle}) => {
           <h1>{mainTitle}</h1>
         </div>
       </div>
-
-      <div className="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+      <div className="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">    
         {produtos.map((produto) => (
           <ProdutoCard
             key={produto.id}
