@@ -1,9 +1,6 @@
 # 🧾 Documentação dos Componentes - Teste Montink
 
 
-O foco deste projeto foi a funcionalidade, sem ênfase em estilização. O HTML foi convertido para JSX, sendo posteriormente organizado em componentes reutilizáveis. A estrutura foi pensada para que os dados possam ser facilmente adaptados.
-
-
 ##APP.tsx
 
 Componente principal da aplicação.
@@ -13,9 +10,9 @@ Gerencia os estados e renderiza os componentes.
 
 ##Produto e Curso
 
-Componente de listagem de produtos/curso , ela é baseada em um objeto que armazena as categorias como chaves e arrays como valores. Esse objeto inicial serve como base para os estados dinâmicos manipulados pelo componente. A lógica de edição é controlada localmente, utilizando estados com useState e useEffect. Assim armazenar os produtos em estado local, renderizar uma lista de ProdutoCard / CursoCard e fornece a função onUpdate para que cada card possa atualizar seus dados.
+Componente de listagem de produtos/curso , ela é baseada em um objeto que armazena as categorias como chaves e arrays como valores. Esse objeto inicial serve como base para os estados dinâmicos manipulados pelo componente. A lógica de edição é controlada localmente, utilizando estados com useState e useEffect. Assim armazena os produtos em estado local, renderiza uma lista de ProdutoCard / CursoCard e fornece a função onUpdate para que cada card possa atualizar seus dados.
 
-##CARDS (produtoCard e cursoCard)
+##CARDS (productCard e cursoCard)
 
 Este componente representa um card individual, com a possibilidade de edição inline de título, descrição e valor. Ele recebe as informações do componente pai  por meio de props. Cada vez que o usuário dá um duplo clique no card, ele entra no modo de edição.
 A comunicação entre eles segue o padrão pai-filho, onde o card apenas dispara a atualização, e o componente pai aplica a modificação no estado global.
