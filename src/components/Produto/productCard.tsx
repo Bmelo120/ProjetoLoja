@@ -34,8 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ titulo, descricao, imagem, id
           alt={titulo}
         />
         <a href="#" className="card-body p-4 pe-visiblePainted">
-          <p className="text-primary card-text mb-0">Produto
-          </p>
+          <p className="text-primary card-text mb-0">Produto</p>
           {isEditing ? (
             <>
               <input

@@ -6,6 +6,7 @@ import Cursos from './components/Curso/cursos';
 import { Modal } from './components/modal';
 
 
+
 const App: React.FC = () => {
   const [ selectProduct, setSelectProduct ] = useState("bone");
   const [ selectCurse,setSelectCurse ] = useState("tecnologia")

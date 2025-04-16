@@ -12,7 +12,7 @@ export const Modal: React.FC<ModalProps> = ({ onTituloProduct, onTituloCurse}) =
 
   const handleSalvar = () => {
     onTituloProduct(tituloProduto);
-    onTituloCurse(tituloCurso)
+    onTituloCurse(tituloCurso);
   };
 
     return (
@@ -30,7 +30,7 @@ export const Modal: React.FC<ModalProps> = ({ onTituloProduct, onTituloCurse}) =
               </small>
               <form className="mt-4">
                 <div className="mb-3">
-                  <label htmlFor="tituloInput" className="form-label">Primeiro título</label>
+                  <label htmlFor="tituloInput" className="form-label" >Primeiro título</label>
                   <input type="text" className="form-control" value={tituloProduto} onChange={(e) => setTituloProduto(e.target.value)} id="tituloInput"
                     aria-describedby="emailHelp" />
                 </div>
