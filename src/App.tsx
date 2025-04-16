@@ -65,7 +65,7 @@ const App: React.FC = () => {
         </div>
         <footer className="bg-white sticky-footer">
           <div className="container my-auto">
-            <div className="text-center my-auto copyright"><span>Teste Montink © Barbara G Melo</span></div>
+            <div className="text-center my-auto copyright"><span> © Barbara G Melo</span></div>
           </div>
         </footer>
       </div>
