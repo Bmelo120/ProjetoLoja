@@ -2,7 +2,7 @@
 
 # 📌 Link - https://projeto-loja-navy.vercel.app/
 
-# APP.tsx
+## APP.tsx
 
 Componente principal da aplicação.
 useEffect - Ao montar o componente, carrega os dados previamente salvos do localStorage.
