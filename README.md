@@ -1,4 +1,4 @@
-# 🧾 Documentação dos Componentes - Teste Montink
+# 🧾 Documentação dos Componentes
 
 # 📌 Link - https://projeto-loja-navy.vercel.app/
 
